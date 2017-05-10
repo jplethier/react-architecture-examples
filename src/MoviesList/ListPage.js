@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 
-import './Movies.css';
-import { search } from '../actions/search';
-import Search from '../components/Search';
-import List from '../components/List';
+import './ListPage.css';
+import { search } from './actions';
+import Search from './SearchForm';
+import List from './MoviesList';
 
 class MoviesListPage extends Component {
   constructor(props) {

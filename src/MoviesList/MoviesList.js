@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 
-import './List.css';
+import './MoviesList.css';
 
 class List extends Component {
   render() {
