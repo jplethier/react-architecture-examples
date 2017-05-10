@@ -4,8 +4,8 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom'
-import MoviesListPage from './containers/MoviesListPage';
-import MoviePage from './containers/MoviePage';
+import MoviesListPage from './MoviesList/ListPage';
+import MoviePage from './MovieShowPage/MoviePage';
 
 import './index.css';
 
