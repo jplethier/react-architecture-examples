@@ -6,7 +6,12 @@ class Search extends Component {
   render() {
     return (
       <div className="Search">
-        Componente de busca
+        <label>Digite o nome do filme</label>
+        <input
+          type="text"
+          name="search"
+          onChange={(e) => this.props.onChange(e)}
+        />
       </div>
     );
   }
