@@ -6,7 +6,11 @@ class List extends Component {
   render() {
     return (
       <div className="List">
-        Listagem de filmes
+        <ul>
+          {this.props.movies.map((movie, index) => (
+            <li key={ index }>{movie.Title}</li>
+          ))}
+        </ul>
       </div>
     );
   }
