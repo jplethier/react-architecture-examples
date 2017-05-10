@@ -4,17 +4,16 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom'
-import App from './containers/App';
+import MoviesListPage from './containers/MoviesListPage';
+import MoviePage from './containers/MoviePage';
 
 import './index.css';
 
 ReactDOM.render(
   (<Router>
     <div>
-      <App/>
-      <Route exact path="/" component={App}/>
-      <Route path="/about" component={App}/>
-      <Route path="/topics" component={App}/>
+      <Route exact path="/" component={MoviesListPage} />
+      <Route path="/:movieId" component={MoviePage}/>
     </div>
   </Router>),
   document.getElementById('root')
