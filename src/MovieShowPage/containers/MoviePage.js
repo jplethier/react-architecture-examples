@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import { Button, Col, Row, Icon } from 'react-materialize';
+import { Button, Col, Row } from 'react-materialize';
 
 import './MoviePage.css';
 import { getMovie } from '../actions';
@@ -43,7 +43,7 @@ class MoviePage extends Component {
             </Row>
             <Row>
               <Col s={12} m={6} l={6}>
-                <img src={movie.Poster} />
+                <img src={movie.Poster} alt="Movie poster"/>
               </Col>
               <Col s={12} m={6} l={6}>
                 <p>{movie.Genre}</p>
