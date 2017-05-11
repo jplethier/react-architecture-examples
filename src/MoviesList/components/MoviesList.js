@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Card, CardTitle, Row, Col } from 'react-materialize';
 import { Link } from 'react-router-dom'
 
 import './MoviesList.css';
@@ -6,15 +7,17 @@ import './MoviesList.css';
 class List extends Component {
   render() {
     return (
-      <div className="List">
-        <ul>
-          {this.props.movies.map((movie, index) => (
-            <li key={ index }>
-              <Link to={'/' + movie.imdbID}>{movie.Title}</Link>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <Row>
+        {this.props.movies.map((movie, index) => (
+          <Col key={index} m={6} s={12}>
+            <Card
+              header={<CardTitle image={movie.Poster}>{movie.Title}</CardTitle>}
+            >
+              <Link to={'/' + movie.imdbID}>More details</Link>
+            </Card>
+          </Col>
+        ))}
+      </Row>
     );
   }
 }

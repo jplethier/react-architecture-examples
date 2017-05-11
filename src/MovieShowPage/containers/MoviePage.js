@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
+import { Button, Col, Row } from 'react-materialize';
 
 import './MoviePage.css';
 import { getMovie } from '../actions';
@@ -27,16 +28,28 @@ class MoviePage extends Component {
 
     return (
       <div>
-        <Link to="/">Voltar</Link>
+        <Row>
+          <Button>
+            <Link to="/">Voltar</Link>
+          </Button>
+        </Row>
         {isLoading ?
-          <div>
+          <Row>
             Carregando
-          </div> :
+          </Row> :
           <div>
-            <h1>{movie.Title}</h1>
-            <img src={movie.Poster} />
-            <p>{movie.Genre}</p>
-            <p>{movie.Plot}</p>
+            <Row>
+              <h1>{movie.Title}</h1>
+            </Row>
+            <Row>
+              <Col s={12} m={6} l={6}>
+                <img src={movie.Poster} />
+              </Col>
+              <Col s={12} m={6} l={6}>
+                <p>{movie.Genre}</p>
+                <p>{movie.Plot}</p>
+              </Col>
+            </Row>
           </div>}
       </div>
     );

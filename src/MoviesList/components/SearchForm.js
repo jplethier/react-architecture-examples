@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
+import { Row, Input, Icon } from 'react-materialize';
 
 import './SearchForm.css';
 
 class Search extends Component {
   render() {
     return (
-      <div className="Search">
-        <label>Digite o nome do filme</label>
-        <input
+      <Row>
+        <Input
           type="text"
-          name="search"
+          label="Search for movie title"
           onChange={(e) => this.props.onChange(e)}
-        />
-      </div>
+        >
+          <Icon>search</Icon>
+        </Input>
+      </Row>
     );
   }
 }
