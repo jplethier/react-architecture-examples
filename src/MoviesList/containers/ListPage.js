@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import _ from 'lodash';
 
 import './ListPage.css';
-import { search } from './actions';
-import Search from './SearchForm';
-import List from './MoviesList';
+import { search } from '../actions';
+import Search from '../components/SearchForm';
+import List from '../components/MoviesList';
 
 class MoviesListPage extends Component {
   constructor(props) {

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 
 import './MoviePage.css';
-import { getMovie } from './actions';
+import { getMovie } from '../actions';
 
 class MoviePage extends Component {
   constructor(props) {
