@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import { Button, Col, Row } from 'react-materialize';
+import { Button, Col, Row, Icon } from 'react-materialize';
 
 import './MoviePage.css';
 import { getMovie } from '../actions';
@@ -48,6 +48,7 @@ class MoviePage extends Component {
               <Col s={12} m={6} l={6}>
                 <p>{movie.Genre}</p>
                 <p>{movie.Plot}</p>
+                <a href={movie.Website} target="_blank">Go to site</a>
               </Col>
             </Row>
           </div>}
